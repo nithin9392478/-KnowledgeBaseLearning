@@ -1,0 +1,30 @@
+.activity-artical{
+    text-decoration-color: #9ACD32;
+}
+.half-a-border-on-top {
+    border-top: 1px solid;
+    border-image: linear-gradient(to right, #000 50%, transparent 50%) 100% 1;
+  }
+.card-height{
+    border-radius: 25%;
+    height: 13vh;
+    width: 13vh;
+}
+.category-text{
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+.category-border{
+    border-bottom: 3px solid #9ACD32
+}
+
+@media (max-width: 768px) {
+    .card-height{
+        height: 6vh;
+        width: 6vh;
+    }
+    .category-text{
+        font-size: 0.4rem;
+        font-weight: 600;
+    }
+}

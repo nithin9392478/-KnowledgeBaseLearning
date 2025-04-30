@@ -1,0 +1,19 @@
+.header-knowledge {
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.header-nav {
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px){
+    .header-knowledge {
+        font-size: 1rem;
+    }
+    .header-nav {
+        font-size: 0.85rem;
+    }
+}

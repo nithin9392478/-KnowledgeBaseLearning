@@ -1,0 +1,20 @@
+.event-image{
+    height: 18vh;
+    width: 39vh;
+}
+
+.event-discription{
+    width: 38vh;
+    overflow-wrap: break-word;
+    font-size: 0.8rem;
+}
+.event-border{
+    border-right: 4px solid green !important;
+}
+.event-news-border{
+    border-left: 5px solid #ffc107;
+}
+.current-event-border{
+    font-size: 0.8rem;
+    border-radius: 20px;
+}

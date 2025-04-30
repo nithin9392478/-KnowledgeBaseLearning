@@ -1,0 +1,42 @@
+.search-image {
+    background-image: url('../assets/serach.png');
+    width: 100%;
+    min-height: 30vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-input-container {
+    position: relative;
+    width: 100%;
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    pointer-events: none;
+    font-size: 1rem;
+    z-index: 2;
+}
+
+.search-input {
+    border-radius: 20px !important;
+    padding: 10px 20px 10px 40px;
+}
+
+@media (max-width: 768px) {
+    .search-image {
+        min-height: 30vh;
+        background-attachment: scroll; 
+    }
+    .w-50 {
+        width: 90% !important; 
+    }
+}
