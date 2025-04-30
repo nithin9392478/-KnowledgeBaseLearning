@@ -17,7 +17,12 @@
 .category-border{
     border-bottom: 3px solid #9ACD32
 }
-
+.select-card {
+    cursor: pointer;
+}
+.category-border{
+    border-radius: 11px;
+}
 @media (max-width: 768px) {
     .card-height{
         height: 6vh;

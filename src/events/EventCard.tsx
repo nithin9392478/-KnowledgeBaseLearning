@@ -7,7 +7,7 @@ interface IEventCardProps {
 const EventCard = (props: IEventCardProps) => {
     return (
         <div className=''>
-            <div className="card event-image">
+            <div className="event-image">
                 <img src={props.image.src} className="card-img-top h-100    " alt="..." />
             </div>
             <div className='event-discription fw-bold'>{props.title}</div>

@@ -20,6 +20,11 @@ const ArticalData=[
         heading1:'IT Articles Category',
         heading2:'Laugh & category', 
     },
-
+    {
+        id:4,
+        image: {src:category3, alt:'HR'},
+        heading1:'IT Articles Category',
+        heading2:'Laugh & category', 
+    },
 ]
 export default ArticalData;

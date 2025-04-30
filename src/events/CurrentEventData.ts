@@ -3,8 +3,8 @@ const currentEventData = [
         id: 1,
         eventDate: 12,
         eventMonth: "Jan",
-        title: "Location 1",
-        description: "Description of Event 1",
+        title: "Lunch & Learn",
+        description: "8:00 AM - 9:00 AM",
         message: "Get Together",
         color: '#2E8B57'
     },
@@ -12,8 +12,8 @@ const currentEventData = [
         id: 2,
         eventDate: 15,
         eventMonth: "Feb",
-        title: "Location 2",
-        description: "Description of Event 2",
+        title: "New Hire Orientation",
+        description: "5:00 PM - 6:00 PM",
         message: "Business",
         color: '#9ACD32'
     },
@@ -21,8 +21,8 @@ const currentEventData = [
         id: 3,
         eventDate: 20,
         eventMonth: "Mar",
-        title: "Location 3",
-        description: "Description of Event 3",
+        title: "Meet & Greet",
+        description: "7:00 PM - 8:00 PM",
         message: "Business",
         color: '#9ACD32'
     },
@@ -30,8 +30,8 @@ const currentEventData = [
         id: 4,
         eventDate: 25,
         eventMonth: "Apr",
-        title: "Location 4",
-        description: "Description of Event 4",
+        title: "Product Training",
+        description: "5:00 PM - 6:00 AM",
         message: "Meeting",
         color: '#20B2AA'
     },

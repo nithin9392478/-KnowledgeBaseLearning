@@ -3,6 +3,7 @@ import './Artical.css'
 import ArticalCard from './ArticalCard';
 import ArticalData from './ArticalData';
 import ArticalNavigation from './ArticalNavigation';
+import Slider from "react-slick"
 const Artical = () => {
     return(
         <div className="d-flex justify-content-between">
@@ -14,7 +15,7 @@ const Artical = () => {
                 </div>
                 </div>
                 <div className="row d-flex justify-content-end align-items-center flex-wrap gap-3">
-                    <div className="col-sm-11 d-flex  aligin-items-center gap-2 ">
+                    <div className="col-sm-11 d-flex  aligin-items-center justify-content-center gap-2 ">
                         {
                             ArticalNavigation.map((artical)=>{
                                 return(
@@ -22,10 +23,12 @@ const Artical = () => {
                                 )
                             })
                         }
+                        
                     </div>
                 </div>
                 <div className='d-flex flex-wrap align-items-center justify-content-end'>
                     <div className='col-sm-11 d-flex flex-wrap align-items-center gap-3'>
+                    
                     {ArticalData.map((artical) => {
                         return (
                             <ArticalCard image={artical.image} title={artical.heading1} description={artical.heading2}/>

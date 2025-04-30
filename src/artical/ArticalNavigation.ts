@@ -15,10 +15,6 @@ const ArticalNavigation = [
         id:4,
         title:'Laugh & category',
     },
-    {
-        id:5,
-        title:'Laugh & category',
-    },
 
 ]
 export default ArticalNavigation;

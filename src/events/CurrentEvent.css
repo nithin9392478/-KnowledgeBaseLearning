@@ -1,3 +1,9 @@
 .current-event-border{
     border-radius: 20px;
 }
+.date-month{
+    line-height: 1;
+}
+.event-discription{
+    font-size: 0.8px;
+}
