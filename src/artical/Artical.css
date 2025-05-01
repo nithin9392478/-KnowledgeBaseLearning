@@ -3,6 +3,7 @@
     background-color: #a0a0a04d;
     border-radius: 20px;
     font-size: 0.8rem;
+    cursor: pointer;
 }
 .artical-image{
     height: 18vh;
@@ -29,6 +30,9 @@
 }
 .quick-border{
     border-bottom: 1px solid black;
+}
+.left-right-icon{
+    cursor: pointer;
 }
 .artical-border{
     padding: 1px;

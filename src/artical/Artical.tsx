@@ -50,6 +50,7 @@ const Artical = () => {
         ]
     };
 
+
     return (
         <div className="d-flex justify-content-between">
             <div className="col-sm-8">
@@ -61,11 +62,13 @@ const Artical = () => {
                 </div>
                 <div className="row d-flex justify-content-end align-items-center flex-wrap gap-3">
                     <div className="col-sm-11 d-flex aligin-items-center justify-content-center gap-2 ">
+                        <div className='left-right-icon'>&#60;</div>
                         {
                             ArticalNavigation.map((artical) => (
                                 <div key={artical.title} className='artical-header px-3 d-flex justify-content-center align-items-center'>{artical.title}</div>
                             ))
                         }
+                        <div className='left-right-icon'>&#62;</div>
                     </div>
                 </div>
                 <div className='d-flex flex-wrap align-items-center justify-content-end'>

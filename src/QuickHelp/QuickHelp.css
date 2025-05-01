@@ -1,9 +1,19 @@
+
 .quick-help{
-    background-color: #a0a0a04d;
+    background-color: #e2e2e2;                        
 }
 .quick-border{
-    border-bottom: 0.1px solid #00000038;
+    border-bottom: 0.1px solid #0000002e !important;
 }
 .help-font{
+    font-size: 0.8rem;
+}
+.accordion-item {
+    background-color: #e2e2e2 !important;
+}
+.help-item{
+    cursor: pointer;
+}
+.help-item-discription{
     font-size: 0.8rem;
 }
