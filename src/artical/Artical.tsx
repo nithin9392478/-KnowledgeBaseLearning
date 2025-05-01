@@ -1,7 +1,7 @@
 import Slider from 'react-slick';
 import QuickHelp from '../QuickHelp/QuickHelp';
 import './Artical.css';
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ArticalCard from './ArticalCard';
 import ArticalData from './ArticalData';
@@ -28,11 +28,23 @@ const Artical = () => {
                 }
             },
             {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: true,
+                    arrows: false,
+                    adaptiveHeight: true
+                }
+            },
+            {
                 breakpoint: 300,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    dots: true
+                    dots: true,
+                    arrows: false,
+                    adaptiveHeight: true
                 }
             }
         ]

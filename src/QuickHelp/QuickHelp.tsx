@@ -9,7 +9,7 @@ const QuickHelp = () => {
             <div className='d-flex flex-column  gap-3'>
                 <div className=''><input type="text" className="search-input form-control" placeholder="Search for articles, topics, or keywords..." /></div>
                 <div className='px-2 d-flex gap-2 flex-column help-font'>
-                    help web hosting services domain management
+                    <div>help web hosting services domain management</div>
                     <div className='quick-border'></div>
                 </div>
                 <div className='px-2 d-flex gap-2 flex-column help-font'>

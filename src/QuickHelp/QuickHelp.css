@@ -2,7 +2,7 @@
     background-color: #a0a0a04d;
 }
 .quick-border{
-    border-bottom: 1px solid black;
+    border-bottom: 0.1px solid #00000038;
 }
 .help-font{
     font-size: 0.8rem;

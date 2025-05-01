@@ -36,6 +36,10 @@
     font-family: "Paytone One", sans-serif;
 }
 
+.search-icon{
+    cursor: pointer !important;
+}
+
 @media (max-width: 768px) {
     .search-image {
         min-height: 30vh;
