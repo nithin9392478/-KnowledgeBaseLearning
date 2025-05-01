@@ -5,14 +5,14 @@ import './Event.css'
 import currentEventData from "./CurrentEventData";
 const Events = () => {
     return(
-        <div className="d-flex justify-content-end">
+        <div className="d-flex justify-content-end pt-3">
             <div className="col-sm-11">
-                <div className="fs-4 fw-bold d-flex">
+                <div className="fs-4 fw-bold d-flex col-sm-12">
                     <div className='d-flex justify-content-center'><div className='event-news-border h-100'></div></div>
-                    News &amp; Events
+                    NEWS &amp; EVENTS
                 </div>
-                <div className="d-flex justify-content-between">
-                    <div className="col-sm-8 d-flex flex-wrap gap-3 ">
+                <div className="d-flex flex-wrap justify-content-between col-sm-12">
+                    <div className="col-md-8 col-sm-12 d-flex aligin-item-center flex-wrap gap-3 ">
                         {
                             EventData.map((event) => {
                                 return (
@@ -21,7 +21,7 @@ const Events = () => {
                             })
                         }
                     </div>
-                    <div className="col-sm-3 d-flex flex-column gap-1">
+                    <div className="col-md-3 col-sm-12 d-flex justify-content-center flex-column gap-1">
                         {
                             currentEventData.map((event)=>{
                                 return(

@@ -14,7 +14,7 @@ const CategoryCard = (props: CategoryCardProps) => {
                         <img className="w-100" src={props.image.src} alt={props.image.alt} />
                     </div>
                     </div>
-                    <div className="text-center category-text">{props.name}</div>
+                    <div className="text-center fw-bold category-text">{props.name}</div>
                 </div>
             </div>
         </>

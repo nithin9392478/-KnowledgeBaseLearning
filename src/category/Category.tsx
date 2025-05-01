@@ -3,8 +3,8 @@ import CategoryCard from './CategoryCard';
 import categories from './CategoryData';
 const Category = () => {
     return (
-        <div className="activity d-flex justify-content-center align-items-center p-2 flex-column gap-4">
-            <div className="fs-4 fw-bold ">
+        <div className="activity d-flex justify-content-center align-items-center  flex-column gap-4">
+            <div className="fs-4 fw-bold p-2">
                 Articles by Category
                 <div className='d-flex justify-content-center'><div className='category-border w-50'></div></div>
             </div>

@@ -12,6 +12,15 @@
 .resource-image{
     width: 1.5rem;
 }
+.resource-text{
+    font-size: 1rem;
+}
+@media (min-width: 480px) and (max-width: 768px)
+{
+    .resource-text {
+        font-size: 0.6rem;
+    }
+}
 .hvr-bounce-out {
     display: inline-block;
     vertical-align: middle;

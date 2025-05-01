@@ -3,7 +3,7 @@ import ResourceData from './ResourceData';
 import './Resources.css'
 const Resources = () => {
     return (
-        <div className='d-flex justify-content-end '>
+        <div className='d-flex justify-content-end pt-3'>
             <div className="col-sm-11 d-flex justify-content-end  flex-column gap-2">
                 <div className="fs-4 fw-bold d-flex">
                     <div className='d-flex justify-content-center'><div className='resource-border h-100'></div></div>

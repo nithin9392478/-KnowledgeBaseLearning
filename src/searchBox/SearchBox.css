@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
 .search-image {
     background-image: url('../assets/serach.png');
     width: 100%;
@@ -29,6 +30,10 @@
 .search-input {
     border-radius: 20px !important;
     padding: 10px 20px 10px 40px;
+}
+
+.artical-search{
+    font-family: "Paytone One", sans-serif;
 }
 
 @media (max-width: 768px) {
