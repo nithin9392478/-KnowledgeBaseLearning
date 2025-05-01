@@ -60,7 +60,7 @@
 .carousel-button {
     background-color: transparent;
     border: none;
-    font-size: 2rem;
+    font-size: 1rem;
     cursor: pointer;
     user-select: none;
     padding: 0 0.5rem;
@@ -90,6 +90,15 @@
 
 .carousel-dots .dot.active {
     background-color: #717171;
+}
+.image-slider-container {
+    margin: 0 auto;
+    width: 40px;
+  }
+  
+.image-slider-container .slick-prev:before,
+.image-slider-container .slick-next:before {
+    color: black;
 }
 
 @media (max-width: 768px) {

@@ -4,6 +4,9 @@ import './Artical.css'
 import ArticalCard from './ArticalCard';
 import ArticalData from './ArticalData';
 import ArticalNavigation from './ArticalNavigation';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from 'react-slick';
 
 const Artical = () => {
     const carouselRef = useRef<HTMLDivElement>(null);
@@ -22,14 +25,18 @@ const Artical = () => {
         }
     };
 
+    const settings = {
+        dots: true,
+    }
+
     useEffect(() => {
         const interval = setInterval(() => {
             scrollRight();
-        }, 3000); // auto scroll every 3 seconds
+        }, 5000);
         return () => clearInterval(interval);
     }, []);
 
-    return(
+    return (
         <div className="d-flex justify-content-between">
             <div className="col-sm-8">
                 <div className='d-flex justify-content-end'>
@@ -41,26 +48,26 @@ const Artical = () => {
                 <div className="row d-flex justify-content-end align-items-center flex-wrap gap-3">
                     <div className="col-sm-11 d-flex  aligin-items-center justify-content-center gap-2 ">
                         {
-                            ArticalNavigation.map((artical)=> {
-                                return(
+                            ArticalNavigation.map((artical) => {
+                                return (
                                     <div key={artical.title} className='artical-header px-3 d-flex justify-content-center align-items-center'>{artical.title}</div>
                                 )
                             })
                         }
+                        <button aria-label="Scroll Right" className="carousel-button next" onClick={scrollRight}>&#10095;</button>
                     </div>
                 </div>
                 <div className='d-flex flex-wrap align-items-center justify-content-end'>
                     <div className='col-sm-11 d-flex flex-wrap align-items-center gap-3'>
-                        {/* Carousel for article images */}
                         <div className="carousel-wrapper">
                             <button aria-label="Scroll Left" className="carousel-button prev" onClick={scrollLeft}>&#10094;</button>
                             <div className="carousel-container" ref={carouselRef}>
                                 {ArticalData.map((artical) => (
-                                    <ArticalCard 
+                                    <ArticalCard
                                         key={artical.id}
-                                        image={artical.image} 
-                                        title={artical.heading1} 
-                                        description={artical.heading2} 
+                                        image={artical.image}
+                                        title={artical.heading1}
+                                        description={artical.heading2}
                                     />
                                 ))}
                             </div>
@@ -68,6 +75,20 @@ const Artical = () => {
                         </div>
                     </div>
                 </div>
+                {/* <div className='d-flex flex-wrap align-items-center justify-content-end'>
+                    <div className='col-sm-11 d-flex flex-wrap align-items-center gap-3 image-slider-container'>
+                        <Slider {...settings}>
+                            {ArticalData.map((artical) => (
+                                <ArticalCard
+                                    key={artical.id}
+                                    image={artical.image}
+                                    title={artical.heading1}
+                                    description={artical.heading2}
+                                />
+                            ))}
+                        </Slider>
+                    </div>
+                </div> */}
             </div>
             <QuickHelp />
         </div>
