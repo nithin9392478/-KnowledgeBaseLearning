@@ -1,6 +1,7 @@
 
 .quick-help{
-    background-color: #e2e2e2;                        
+    background-color: #e2e2e2;
+    font-size: 1.5rem;                        
 }
 .quick-border{
     border-bottom: 0.1px solid #0000002e !important;
@@ -16,4 +17,11 @@
 }
 .help-item-discription{
     font-size: 0.8rem;
+}
+@media (max-width:646) and (min-width:576)
+{
+    .quick-help{
+        background-color: #e2e2e2;
+        font-size: 0.6rem;     
+    }
 }

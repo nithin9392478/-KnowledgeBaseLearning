@@ -8,7 +8,7 @@ const Category = () => {
                 Articles by Category
                 <div className='d-flex justify-content-center'><div className='category-border w-50'></div></div>
             </div>
-            <div className='category col-sm-5 d-flex  flex-wrap gap-3'>
+            <div className='category col-sm-8 justify-content-center d-flex  flex-wrap gap-3'>
                 {categories.map((category) => {
                     return (
                         <CategoryCard image={category.image} name={category.name} />

@@ -6,13 +6,15 @@ import "slick-carousel/slick/slick-theme.css";
 import ArticalCard from './ArticalCard';
 import ArticalData from './ArticalData';
 import ArticalNavigation from './ArticalNavigation';
+import { useState } from 'react';
 
 const Artical = () => {
+    const [currentID,setCurrentId] = useState(0);
     const settings = {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
@@ -21,7 +23,7 @@ const Artical = () => {
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 3,
                     slidesToScroll: 1,
                     infinite: true,
                     dots: true
@@ -30,7 +32,7 @@ const Artical = () => {
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 3,
                     slidesToScroll: 1,
                     dots: true,
                     arrows: false,
@@ -40,7 +42,7 @@ const Artical = () => {
             {
                 breakpoint: 300,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 3,
                     slidesToScroll: 1,
                     dots: true,
                     arrows: false,
@@ -49,12 +51,29 @@ const Artical = () => {
             }
         ]
     };
+    const data = ArticalNavigation.slice(currentID, currentID + 3);
 
-
+    const clickNext = () => {
+        
+        if (currentID + 3 < ArticalNavigation.length) {
+            setCurrentId(currentID + 3);
+        }
+    };
+    
+    const clickPrevious = () => {
+    
+        if (currentID - 3 >= 0) {
+            setCurrentId(currentID - 3);
+        } else {
+            setCurrentId(0);
+        }
+    };
+    
+    
     return (
-        <div className="d-flex justify-content-between">
-            <div className="col-sm-8">
-                <div className='d-flex justify-content-end'>
+        <div className="d-flex justify-content-between flex-wrap">
+            <div className="col-lg-8 col-12">
+                <div className='d-flex artical-heading'>
                     <div className="col-sm-11 fs-4 fw-bold d-flex p-2">
                         <div className='d-flex justify-content-center'><div className='artical-border h-100'></div></div>
                         IT Articles Category
@@ -62,17 +81,17 @@ const Artical = () => {
                 </div>
                 <div className="row d-flex justify-content-end align-items-center flex-wrap gap-3">
                     <div className="col-sm-11 d-flex aligin-items-center justify-content-center gap-2 ">
-                        <div className='left-right-icon'>&#60;</div>
+                        <div className={`left-right-icon ${currentID === 0 ? 'disabled' : ''}`} onClick={clickPrevious}>&#60;</div>
                         {
-                            ArticalNavigation.map((artical) => (
+                            data.map((artical) => (
                                 <div key={artical.title} className='artical-header px-3 d-flex justify-content-center align-items-center'>{artical.title}</div>
                             ))
                         }
-                        <div className='left-right-icon'>&#62;</div>
+                        <div className={`left-right-icon ${currentID + 3 >= ArticalNavigation.length ? 'disabled' : ''}`} onClick={clickNext}>&#62;</div>
                     </div>
                 </div>
                 <div className='d-flex flex-wrap align-items-center justify-content-end'>
-                    <div className='col-sm-11'>
+                    <div className='col-sm-11 artical-image-container'>
                         <Slider {...settings}>
                             {ArticalData.map((artical) => (
                                 <ArticalCard
@@ -92,3 +111,7 @@ const Artical = () => {
 };
 
 export default Artical;
+
+
+
+

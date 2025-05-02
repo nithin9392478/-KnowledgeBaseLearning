@@ -11,8 +11,8 @@ const QuickHelp = () => {
     };
 
     return (
-        <div className="col-sm-3 p-3 d-flex flex-column gap-3 border quick-help">
-            <div className='fs-4 fw-bold d-flex'>
+        <div className="col-lg-3 col-12 p-3 d-flex flex-column gap-3 border quick-help">
+            <div className='fw-bold d-flex'>
                 <div className='d-flex justify-content-center'><div className='artical-border h-100'></div></div>
                 Quick help
             </div>
@@ -23,7 +23,7 @@ const QuickHelp = () => {
                 {HelpItemsData.map((item, index) => (
                     <div key={index} className='accordion-item  border-0 help-item'>
                         <div className='accordion-header  help-font d-flex justify-content-between' onClick={() => toggleExpand(index)}>
-                            <span className='accordion-title fw-bold'>{item.title}</span>
+                            <span className='accordion-title fw-bold  quick-help-title'>{item.title}</span>
                             <span className='accordion-icon'>{expandedIndex === index ? '-' : '+'}</span>
                         </div>
                         {expandedIndex === index && (

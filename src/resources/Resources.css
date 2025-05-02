@@ -13,13 +13,7 @@
     width: 1.5rem;
 }
 .resource-text{
-    font-size: 1rem;
-}
-@media (min-width: 480px) and (max-width: 768px)
-{
-    .resource-text {
-        font-size: 0.6rem;
-    }
+    font-size: 0.8rem;
 }
 .hvr-bounce-out {
     display: inline-block;
@@ -36,3 +30,16 @@
     -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
     transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
   }
+@media (min-width: 480px) and (max-width: 768px)
+{
+    .resource-text {
+        font-size: 0.6rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1280px)
+{
+    .resource-text{
+        font-size: 0.6rem;
+    }
+}

@@ -9,7 +9,7 @@ const Resources = () => {
                     <div className='d-flex justify-content-center'><div className='resource-border h-100'></div></div>
                     TOP RESOURCES
                 </div>
-                <div className="">
+                <div className="col-sm-10">
                     <input type="text" className="search-input form-control" placeholder="Search for articles, topics, or keywords..." />
                 </div>
                 <div className='d-flex flex-wrap align-items-center   gap-1 mx-1'>

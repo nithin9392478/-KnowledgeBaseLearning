@@ -6,12 +6,15 @@
     cursor: pointer;
 }
 .artical-image{
-    height: 18vh;
-    width: 29vh;
+    height: 25vh;
+    width: 18vw;
     border-radius: 10px !important;
 }
+.artical-image-container{
+    height: 38vh;
+}
 .artical-title{
-    font-size: 0.5rem;
+    font-size: 0.7rem;
     overflow-wrap: break-word;
     width: 28vh;
 }
@@ -20,6 +23,9 @@
     width: 28vh;
     font-size: 0.8rem;
     font-weight: 600;
+}
+.slick-list{
+    height: 37vh;
 }
 .search-input{
     border-radius: 20px !important;
@@ -92,6 +98,12 @@
     cursor: pointer;
 }
 
+.disabled {
+
+    display: none;
+    justify-content: start;
+}
+
 .carousel-dots .dot.active {
     background-color: #717171;
 }
@@ -104,19 +116,25 @@
 .image-slider-container .slick-next:before {
     color: black;
 }
+.artical-heading{
+    justify-content: end;
+}
 
-@media (max-width: 768px) {
+@media (max-width: 768px) and (min-width: 300px) {
     .artical-header{
         font-size: 0.5rem;
     }
     .artical-image{
-        height: 10vh;
-        width: 15vh;
+        height: 20vh;
+        width: 19vw;
     }
     .artical-title{
         font-size: 0.4rem;
         width: 8vh;
         overflow-wrap: break-word;
+    }
+    .artical-heading{
+        justify-content: start;
     }
     .artical-description{
         font-size: 0.4rem;

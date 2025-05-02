@@ -12,7 +12,7 @@ const Events = () => {
                     NEWS &amp; EVENTS
                 </div>
                 <div className="d-flex flex-wrap justify-content-between col-sm-12">
-                    <div className="col-md-8 col-sm-12 d-flex aligin-item-center flex-wrap gap-3 ">
+                    <div className="col-lg-8 col-12 d-flex aligin-item-center flex-wrap gap-3 ">
                         {
                             EventData.map((event) => {
                                 return (
@@ -21,7 +21,7 @@ const Events = () => {
                             })
                         }
                     </div>
-                    <div className="col-md-3 col-sm-12 d-flex justify-content-center flex-column gap-1">
+                    <div className="col-lg-3 col-8 d-flex flex-column gap-1">
                         {
                             currentEventData.map((event)=>{
                                 return(

@@ -33,6 +33,7 @@
 }
 
 .artical-search{
+    font-size: 2.3rem;
     font-family: "Paytone One", sans-serif;
 }
 
@@ -40,12 +41,19 @@
     cursor: pointer !important;
 }
 
+@media (min-width:360px) and (max-width:768px){
+    .artical-search{
+        font-family: "Paytone One", sans-serif;
+        font-size: 1rem !important;
+    }
+}
+
 @media (max-width: 768px) {
     .search-image {
         min-height: 30vh;
         background-attachment: scroll; 
     }
-    .w-50 {
-        width: 90% !important; 
-    }
+    /* .w-50 {
+        width: 100% !important; 
+    } */
 }

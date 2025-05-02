@@ -17,10 +17,10 @@ const CurrentEvent = (props: ICurrentEventProps) => {
                 </div>
                 <div className="col-sm-8 date-month">
                     <div className='date-month'>
-                        <div className='fw-bold'>{props.title}</div>
-                        <div className='event-discription'>{props.discription}</div>
+                        <div className='fw-bold current-event-title'>{props.title}</div>
+                        <div className='current-event-discription'>{props.discription}</div>
                     </div>
-                    <div className='event-discription'>
+                    <div className='current-event-discription'>
                         <span className='fw-bold'>+</span>RSVP
                     </div>
                 </div>
