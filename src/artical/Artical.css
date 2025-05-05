@@ -126,11 +126,14 @@
     }
     .artical-image{
         height: 20vh;
-        width: 19vw;
+        width: 29vw;
+    }
+    .slick-list{
+        height: 30vh;
     }
     .artical-title{
-        font-size: 0.4rem;
-        width: 8vh;
+        font-size: 0.6rem;
+        width: 20vh;
         overflow-wrap: break-word;
     }
     .artical-heading{
@@ -138,7 +141,7 @@
     }
     .artical-description{
         font-size: 0.4rem;
-        width: 8vh;
+        width: 20vh;
         overflow-wrap: break-word;
     }
 }

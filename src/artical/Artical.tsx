@@ -29,24 +29,24 @@ const Artical = () => {
                     dots: true
                 }
             },
-            {
+            {   
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 1,
                     dots: true,
                     arrows: false,
-                    adaptiveHeight: true
+                    adaptiveHeight: true,
                 }
             },
             {
-                breakpoint: 300,
+                breakpoint: 480,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 1,
                     dots: true,
                     arrows: false,
-                    adaptiveHeight: true
+                    adaptiveHeight: true,
                 }
             }
         ]
