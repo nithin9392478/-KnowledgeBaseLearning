@@ -11,6 +11,14 @@
     font-size: 0.6rem;
 }
 
+@media(max-width:398px) 
+{
+    .current-event-border{
+        border-radius: 20px;
+        font-size: 0.6rem !important;
+    }
+}
+
 @media (min-width:991px) and (max-width:1160)
 {
     .current-event-discription{

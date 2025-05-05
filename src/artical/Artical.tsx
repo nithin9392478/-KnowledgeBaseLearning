@@ -6,10 +6,11 @@ import "slick-carousel/slick/slick-theme.css";
 import ArticalCard from './ArticalCard';
 import ArticalData from './ArticalData';
 import ArticalNavigation from './ArticalNavigation';
-import { useState } from 'react';
+import {useState } from 'react';
 
 const Artical = () => {
     const [currentID,setCurrentId] = useState(0);
+    const [data, setData] = useState<{ id: number; title: string }[]>(ArticalNavigation.slice(0, 3));
     const settings = {
         dots: true,
         infinite: true,
@@ -40,7 +41,7 @@ const Artical = () => {
                 }
             },
             {
-                breakpoint: 480,
+                breakpoint: 575,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 1,
@@ -51,21 +52,24 @@ const Artical = () => {
             }
         ]
     };
-    const data = ArticalNavigation.slice(currentID, currentID + 3);
+
 
     const clickNext = () => {
         
-        if (currentID + 3 < ArticalNavigation.length) {
-            setCurrentId(currentID + 3);
+        if (currentID + 1 < ArticalNavigation.length) {
+            setCurrentId(currentID + 1);
+            setData(ArticalNavigation.slice(currentID+1, currentID+1 + 3));
         }
     };
     
     const clickPrevious = () => {
     
-        if (currentID - 3 >= 0) {
-            setCurrentId(currentID - 3);
+        if (currentID - 1 >= 0) {
+            setCurrentId(currentID - 1);
+            setData(ArticalNavigation.slice(currentID-1, currentID-1 + 3));
         } else {
             setCurrentId(0);
+            setData(ArticalNavigation.slice(0, 3));
         }
     };
     
@@ -84,13 +88,13 @@ const Artical = () => {
                         <div className={`left-right-icon ${currentID === 0 ? 'disabled' : ''}`} onClick={clickPrevious}>&#60;</div>
                         {
                             data.map((artical) => (
-                                <div key={artical.title} className='artical-header px-3 d-flex justify-content-center align-items-center'>{artical.title}</div>
+                                <div key={artical.id} className='artical-header px-3 d-flex justify-content-center align-items-center'>{artical.title}</div>
                             ))
                         }
                         <div className={`left-right-icon ${currentID + 3 >= ArticalNavigation.length ? 'disabled' : ''}`} onClick={clickNext}>&#62;</div>
                     </div>
                 </div>
-                <div className='d-flex flex-wrap align-items-center justify-content-end'>
+                <div className='artical-container'>
                     <div className='col-sm-11 artical-image-container'>
                         <Slider {...settings}>
                             {ArticalData.map((artical) => (
@@ -111,6 +115,9 @@ const Artical = () => {
 };
 
 export default Artical;
+
+
+
 
 
 
