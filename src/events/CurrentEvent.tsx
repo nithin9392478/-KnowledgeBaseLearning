@@ -12,7 +12,7 @@ const CurrentEvent = (props: ICurrentEventProps) => {
         <div className="col-sm-12  d-flex justify-content-between">
             <div className="col-sm-7 d-flex  justify-content-between">
                 <div className="col-sm-3 date-month d-flex flex-column justify-content-center align-items-center">
-                    <div className="fs-4 fw-bold">{props.eventDate}</div>
+                    <div className="fs-5 fw-bold">{props.eventDate}</div>
                     <div>{props.eventMonth}</div>
                 </div>
                 <div className="col-sm-8 date-month">

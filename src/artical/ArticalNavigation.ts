@@ -23,6 +23,18 @@ const ArticalNavigation = [
         id:6,
         title:'Laugh & category',
     },
+    {
+        id:7,
+        title:'Laugh & category',
+    },
+    {
+        id:8,
+        title:'Laugh & category',
+    },
+    {
+        id:9,
+        title:'Laugh & category',
+    },
 
 
 ]

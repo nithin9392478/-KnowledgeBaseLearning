@@ -40,6 +40,9 @@
 .search-icon{
     cursor: pointer !important;
 }
+.search-icon-symbol{
+    color: #1f1fc05e;
+}
 
 @media (min-width:360px) and (max-width:768px){
     .artical-search{

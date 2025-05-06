@@ -49,15 +49,15 @@
         width: 8vh;
     }
     .category-text{
-        font-size: 0.4rem;
+        font-size: 0.6rem;
         font-weight: 600;
     }
 }
 
 @media (min-width: 451px) and (max-width: 1180px) {
     .card-height{
-        height: 10vh;
-        width: 10vh;
+        height: 14vh;
+        width: 14vh;
     }
     .category-text{
         font-size: 0.6rem;

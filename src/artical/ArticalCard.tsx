@@ -6,7 +6,7 @@ interface IArticalCardProps {
 }
 const ArticalCard = (props:IArticalCardProps) => {
     return(
-        <div className=''>
+        <div>
             <div className="artical-image">
                 <img src={props.image.src} className="card-img-top h-100" alt="..." />
             </div>

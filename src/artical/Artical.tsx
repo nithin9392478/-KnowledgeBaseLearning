@@ -6,12 +6,15 @@ import "slick-carousel/slick/slick-theme.css";
 import ArticalCard from './ArticalCard';
 import ArticalData from './ArticalData';
 import ArticalNavigation from './ArticalNavigation';
-import {useState } from 'react';
+import { useRef, useState } from 'react';
+import leftArrow from '../assets/left-arrow.png';
+import rightArrow from '../assets/right-arrow.png';
 
 const Artical = () => {
-    const [currentID,setCurrentId] = useState(0);
-    const [data, setData] = useState<{ id: number; title: string }[]>(ArticalNavigation.slice(0, 3));
-    const settings = {
+    const [currentID, setCurrentId] = useState(0);
+    const navSliderRef = useRef<Slider | null>(null);
+
+    const mainSliderSettings = {
         dots: true,
         infinite: true,
         speed: 500,
@@ -30,7 +33,7 @@ const Artical = () => {
                     dots: true
                 }
             },
-            {   
+            {
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 3,
@@ -43,7 +46,7 @@ const Artical = () => {
             {
                 breakpoint: 575,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                     dots: true,
                     arrows: false,
@@ -53,50 +56,77 @@ const Artical = () => {
         ]
     };
 
+    const navSliderSettings = {
+        dots: false,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    };
 
-    const clickNext = () => {
-        
-        if (currentID + 1 < ArticalNavigation.length) {
-            setCurrentId(currentID + 1);
-            setData(ArticalNavigation.slice(currentID+1, currentID+1 + 3));
-        }
-    };
-    
-    const clickPrevious = () => {
-    
-        if (currentID - 1 >= 0) {
-            setCurrentId(currentID - 1);
-            setData(ArticalNavigation.slice(currentID-1, currentID-1 + 3));
-        } else {
-            setCurrentId(0);
-            setData(ArticalNavigation.slice(0, 3));
-        }
-    };
-    
-    
+    const setArticalBackground=(id:number)=>{
+        setCurrentId(id);
+    }
+
     return (
         <div className="d-flex justify-content-between flex-wrap">
             <div className="col-lg-8 col-12">
                 <div className='d-flex artical-heading'>
                     <div className="col-sm-11 fs-4 fw-bold d-flex p-2">
-                        <div className='d-flex justify-content-center'><div className='artical-border h-100'></div></div>
+                        <div className='d-flex justify-content-center'>
+                            <div className='artical-border h-100'></div>
+                        </div>
                         IT Articles Category
                     </div>
                 </div>
+
                 <div className="row d-flex justify-content-end align-items-center flex-wrap gap-3">
-                    <div className="col-sm-11 d-flex aligin-items-center justify-content-center gap-2 ">
-                        <div className={`left-right-icon ${currentID === 0 ? 'disabled' : ''}`} onClick={clickPrevious}>&#60;</div>
-                        {
-                            data.map((artical) => (
-                                <div key={artical.id} className='artical-header px-3 d-flex justify-content-center align-items-center'>{artical.title}</div>
-                            ))
-                        }
-                        <div className={`left-right-icon ${currentID + 3 >= ArticalNavigation.length ? 'disabled' : ''}`} onClick={clickNext}>&#62;</div>
+                    <div className="col-sm-11 d-flex align-items-center justify-content-center  position-relative">
+                        <div className="left-right-icon left-icon d-flex  justify-content-end" onClick={() => navSliderRef.current?.slickPrev()}>
+                            {/* &#60; */}
+                            <img src={leftArrow} alt="" />
+                        </div>
+
+                        <div className="artical-navigation-slider w-75">
+                            <Slider ref={navSliderRef} {...navSliderSettings}>
+                                {ArticalNavigation.map((artical) => (
+                                    <div key={artical.id}>
+                                        <div className={`artical-header px-3 d-flex justify-content-center align-items-center w-100 fw-bold ${artical.id === currentID ? "artical-title-background" : ""}`} onClick={() => setArticalBackground(artical.id)}>
+                                            {artical.title}
+                                        </div>
+                                    </div>
+
+                                ))}
+                            </Slider>
+                        </div>
+
+                        <div className="left-right-icon right-icon" onClick={() => navSliderRef.current?.slickNext()}>
+                            {/* &#62; */}
+                            <img src={rightArrow} alt="" />
+                        </div>
                     </div>
                 </div>
+
                 <div className='artical-container'>
                     <div className='col-sm-11 artical-image-container'>
-                        <Slider {...settings}>
+                        <Slider {...mainSliderSettings}>
                             {ArticalData.map((artical) => (
                                 <ArticalCard
                                     key={artical.id}
@@ -115,9 +145,6 @@ const Artical = () => {
 };
 
 export default Artical;
-
-
-
 
 
 

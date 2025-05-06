@@ -4,6 +4,17 @@
     border-radius: 20px;
     font-size: 0.8rem;
     cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+.artical-header:hover{
+    border: 1px solid rgb(143, 143, 143);
+}
+.slick-slide > div {
+    display: flex;
+    justify-content: center;
 }
 .artical-image{
     height: 25vh;
@@ -13,10 +24,17 @@
 .artical-image-container{
     height: 38vh;
 }
+.artical-navigation-slider .slick-list{
+    height: 2rem;
+}
 .artical-title{
     font-size: 0.7rem;
     overflow-wrap: break-word;
     width: 28vh;
+}
+.artical-title-background{
+    background-color: rgb(41, 41, 63);
+    color: white;
 }
 .artical-description{
     overflow-wrap: break-word;
@@ -39,6 +57,18 @@
 }
 .left-right-icon{
     cursor: pointer;
+}
+.left-icon{
+    padding-top: 0.5rem;
+}
+.right-icon{
+
+}
+.left-icon img{
+    width: 17%;
+}
+.right-icon img{
+    width: 19%;
 }
 .artical-border{
     padding: 1px;
@@ -120,6 +150,13 @@
     justify-content: end;
 }
 
+@media (min-width: 769px) and (max-width: 992px)
+{
+    .slick-list{
+        height: 30vh;
+    }
+}
+
 @media (min-width: 768px)
 {
     .artical-container{
@@ -153,5 +190,19 @@
         font-size: 0.4rem;
         width: 20vh;
         overflow-wrap: break-word;
+    }
+    .left-icon img{
+        width: 26%;
+    }
+    .right-icon img{
+
+        width: 30%;
+    }
+    .left-icon{
+        padding: 0%;
+    }
+    .right-icon{
+        display: flex;
+        align-items: center;
     }
 }
